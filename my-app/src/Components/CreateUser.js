@@ -17,22 +17,22 @@ const Submit = (e)=>{
 
   return (
     <div>
-       <form onSubmit ={Submit}>
-        <h1>Add User</h1>
-        <div class="mb-3">
+       <form onSubmit ={Submit}  className="update-user-form">
+        <h2>Add User</h2>
+        <div className="input-group">
     <label for="exampleInputName" class="form-label">Name</label>
-    <input type="text" class="form-control" id="nameInputEmail1" aria-describedby="emailHelp" onChange = {(e)=>setName(e.target.value)}/>
+    <input type="text"  class="form-control" id="nameInputEmail1" aria-describedby="emailHelp" onChange = {(e)=>setName(e.target.value)} required/>
   </div>
-  <div class="mb-3">
+  <div className="input-group">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   onChange = {(e)=>setEmail(e.target.value)}/>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   onChange = {(e)=>setEmail(e.target.value)} required/>
   </div>
-  <div class="mb-3">
+  <div className="input-group">
     <label for="exampleInputAge" class="form-label">Age</label>
-    <input type="number" class="form-control" id="exampleInputAge" onChange = {(e)=>setAge(e.target.value)}/>
+    <input type="number" class="form-control" id="exampleInputAge" onChange = {(e)=>setAge(e.target.value)} required/>
   </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" className="submit-btn">Submit</button>
 </form>
     </div>
   )

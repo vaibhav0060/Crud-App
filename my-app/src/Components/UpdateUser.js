@@ -27,22 +27,22 @@ useEffect(() => {
         )}
   return (
     <div>
-    <form onSubmit = {update}>
-     <h1>Upate User</h1>
-     <div class="mb-3">
- <label for="exampleInputName" class="form-label">Name</label>
- <input type="text" class="form-control" id="nameInputEmail1" aria-describedby="emailHelp" value={name} onChange = {(e)=> setName(e.target.value)}/>
+    <form onSubmit = {update}  className="update-user-form">
+    <h2>Update User</h2>
+     <div className="input-group">
+ <label for="exampleInputName" className="form-label">Name</label>
+ <input type="text" className="form-control" id="nameInputEmail1" aria-describedby="emailHelp" value={name} onChange = {(e)=> setName(e.target.value)}/>
 </div>
-<div class="mb-3">
- <label for="exampleInputEmail1" class="form-label">Email address</label>
- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   value={email}  onChange = {(e)=> setEmail(e.target.value)}/>
+<div className="input-group">
+ <label for="exampleInputEmail1" className="form-label">Email address</label>
+ <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   value={email}  onChange = {(e)=> setEmail(e.target.value)}/>
 </div>
-<div class="mb-3">
- <label for="exampleInputAge" class="form-label">Age</label>
- <input type="number" class="form-control" id="exampleInputAge"  value={age}  onChange = {(e)=> setAge(e.target.value)}/>
+<div className="input-group">
+ <label for="exampleInputAge" className="form-label">Age</label>
+ <input type="text" className="form-control" id="exampleInputAge"  value={age}  onChange = {(e)=> setAge(e.target.value)}/>
 </div>
 
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" className="submit-btn">Submit</button>
 </form>
  </div>
   )

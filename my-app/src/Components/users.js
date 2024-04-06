@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+// 
 
 
 function Users() {
@@ -20,10 +21,14 @@ axios.get("http://localhost:5000")
     .catch(err =>console.log(err))
   }
   return (
-    <div>
-<div>
-    <Link to="/create" >Add User + </Link>
-<table>
+    <div className="container">
+<div className="row d-flex justify-content-center">
+  <div className="col">
+<table className="text-center">
+<thead>
+<tr>  <Link to="/create"  className="add-user-btn">Add User + </Link>
+</tr>
+</thead>
     <thead>
         <tr>
             <th> Name </th>
@@ -31,9 +36,9 @@ axios.get("http://localhost:5000")
             <th> Age </th>
              <th> Action</th>
 
-
-        </tr>
-    </thead>
+             </tr>
+             </thead>
+  
 <tbody>
 {
     users.map((user)=>{
@@ -42,8 +47,8 @@ axios.get("http://localhost:5000")
             <td> {user.email}</td>
             <td> {user.age}</td>
             <td> 
-            <Link to={`/update/${user._id}`} >Update</Link>
-                 <button  onClick = {(e)=>handleDelete(user._id)}>Delete</button>
+            <Link to={`/update/${user._id}`} className = "user-action-btn update" >Update</Link>
+                 <button  onClick = {(e)=>handleDelete(user._id)} className="user-action-btn delete">Delete</button>
                  </td>
             
         </tr>
@@ -53,7 +58,7 @@ axios.get("http://localhost:5000")
 </tbody>
 
 </table>
-
+</div>
 </div>
 
     </div>
